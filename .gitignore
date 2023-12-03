@@ -1,0 +1,59 @@
+# Flutter/Dart specific
+**/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+.vscode/
+/.metadata
+.fvm/
+build/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.bak
+
+# Android specific
+**/android/key.properties
+**/android/app/debug.keystore
+**/android/app/release.keystore
+**/android/gradle.properties
+**/android/local.properties
+**/android/**/local.properties
+
+# iOS specific
+**/ios/Podfile.lock
+**/ios/Pods/
+**/ios/Runner.xcworkspace/
+**/ios/.symlinks/
+
+# macOS specific
+**/.DS_Store
+
+# Windows specific
+**/windows/Flutter/ephemeral/.plugin_symlinks/
+
+# Visual Studio Code specific
+.vscode/
+
+# Android Studio specific
+*.iml
+*.iws
+*.ipr
+*.xcsettings
+*.pbxproj
+*.yaml
+ios/.metadata
+.flutter-plugins-dependencies
+.flutter-plugins
+.DS_Store
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
