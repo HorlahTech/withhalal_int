@@ -24,3 +24,5 @@ const String payCableIcon = 'assets/icon_images/gala_tv.svg';
 const String payTicketIcon = 'assets/icon_images/pay_ticket.svg';
 const String loadingIcon = 'assets/icon_images/loading_ic.svg';
 const String loadingPngIcon = 'assets/icon_images/loadinpng.png';
+const String arrowSendMoney = 'assets/icon_images/arrow_send.svg';
+const String lowPng = 'assets/icon_images/lowPng.png';

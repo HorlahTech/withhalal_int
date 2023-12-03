@@ -1,16 +1,14 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:withhalal_int/wigets/app_colors.dart';
-import 'package:withhalal_int/wigets/app_text.dart';
-import 'package:withhalal_int/wigets/spacing.dart';
 
 class ChartWidget extends StatelessWidget {
   const ChartWidget({
     super.key,
   });
 
-  // final List<Color> colors = [const Color(0xff369CDC)];
   @override
   Widget build(BuildContext context) {
     return SizedBox(

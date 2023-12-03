@@ -46,12 +46,14 @@ class BalanceCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  AppText(
-                    text: '₦500,387.00',
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.primaryWhite,
-                  ),
+                  RichText(
+                      text: TextSpan(
+                          text: ' \u{20A6}  500,387.00',
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.primaryWhite,
+                          ))),
                   CustomeSizedBox(width: 20.w),
                   Icon(
                     Icons.visibility_off,
@@ -117,10 +119,10 @@ class CreditScoreCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(
-                  lowIcon,
+                Image.asset(
+                  lowPng,
                 ),
-                AppText(text: 'Low'),
+                AppText(text: ' Low'),
               ],
             ),
           ),

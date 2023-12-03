@@ -21,7 +21,7 @@ class Savings extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.arrow_back_ios),
+                icon: const Icon(Icons.arrow_back_ios),
               ),
               CustomeSizedBox(
                 width: 72.w,
@@ -39,7 +39,7 @@ class Savings extends StatelessWidget {
                 padding: const EdgeInsets.all(2),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
-                    color: AppColors.primaryPurple.withOpacity(.3)),
+                    color: AppColors.primaryPurple.withOpacity(.2)),
                 child: AppText(
                   text: 'Spend To Save',
                   textAlign: TextAlign.center,
@@ -56,12 +56,16 @@ class Savings extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AppText(
-                    text: '₦50,000.00',
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.w700,
+                  RichText(
+                    text: TextSpan(
+                        text: '₦50,000.00',
+                        style: TextStyle(
+                          fontSize: 24.sp,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.primaryBlack,
+                        )),
                   ),
-                  Icon(Icons.visibility_off_outlined)
+                  const Icon(Icons.visibility_off_outlined)
                 ],
               )
             ],
@@ -71,17 +75,23 @@ class Savings extends StatelessWidget {
           ),
           const ChartWidget(),
           CustomeSizedBox(
-            height: 30.h,
+            height: 20.h,
           ),
-          AppText(
-            text: 'Target Amount ₦120,000',
-            fontSize: 14.sp,
-            color: AppColors.primarygrey,
+          RichText(
+            text: TextSpan(
+                text: 'Target Amount ₦120,000',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: AppColors.primarygrey,
+                )),
+          ),
+          CustomeSizedBox(
+            height: 10,
           ),
           LinearProgressIndicator(
-            value: 30,
+            value: 0.2,
             color: AppColors.primaryBlack,
-            backgroundColor: AppColors.primarygrey,
+            backgroundColor: AppColors.primarygrey.withOpacity(0.5),
           ),
           CustomeSizedBox(
             height: 30,
@@ -91,7 +101,7 @@ class Savings extends StatelessWidget {
             padding: pagePadding,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
-                border: Border.all(width: .5, color: AppColors.primarygrey)),
+                border: Border.all(width: .3, color: AppColors.primarygrey)),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -147,11 +157,16 @@ class Savings extends StatelessWidget {
                   (index) => ListTile(
                         leading: CircleAvatar(
                           radius: 20.r,
+                          child: SvgPicture.asset(arrowSendMoney),
                         ),
-                        title: AppText(
-                          text: '₦20,000.00',
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w500,
+                        title: RichText(
+                          text: TextSpan(
+                              text: '₦ 20,000.00',
+                              style: TextStyle(
+                                fontSize: 14.sp,
+                                color: AppColors.primaryBlack,
+                                fontWeight: FontWeight.w500,
+                              )),
                         ),
                         subtitle: AppText(
                           text: 'Automatic Top up',

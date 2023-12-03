@@ -135,11 +135,11 @@ class HomeBar extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 300,
+                    height: 250,
                     child: ListView(
                       shrinkWrap: true,
                       children: List.generate(
-                        50,
+                        3,
                         (index) => ListTile(
                           contentPadding: pagePadding.copyWith(
                               top: 10, bottom: 0, left: 10, right: 10),
@@ -155,9 +155,13 @@ class HomeBar extends StatelessWidget {
                             fontSize: 12.sp,
                             color: AppColors.primarygrey,
                           ),
-                          subtitle: AppText(
-                            text: '₦2,500',
-                            color: AppColors.primarygrey,
+                          subtitle: RichText(
+                            text: TextSpan(
+                                text: '₦2,500',
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                  color: AppColors.primarygrey,
+                                )),
                           ),
                           trailing: AppText(
                             text: 'Yesterday, 11:40am',
