@@ -157,7 +157,7 @@ class Savings extends StatelessWidget {
                   (index) => ListTile(
                         leading: CircleAvatar(
                           radius: 20.r,
-                          child: SvgPicture.asset(arrowSendMoney),
+                          // child: SvgPicture.asset(arrowSendMoney),
                         ),
                         title: RichText(
                           text: TextSpan(

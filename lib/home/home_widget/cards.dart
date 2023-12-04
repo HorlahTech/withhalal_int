@@ -122,7 +122,10 @@ class CreditScoreCard extends StatelessWidget {
                 Image.asset(
                   lowPng,
                 ),
-                AppText(text: ' Low'),
+                CustomeSizedBox(
+                  width: 5,
+                ),
+                AppText(text: 'Low'),
               ],
             ),
           ),

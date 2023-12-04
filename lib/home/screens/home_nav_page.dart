@@ -7,7 +7,6 @@ import 'package:withhalal_int/home/screens/home_bar.dart';
 import 'package:withhalal_int/home/screens/savings_screen.dart';
 import 'package:withhalal_int/wigets/app_colors.dart';
 import 'package:withhalal_int/wigets/image_files.dart';
-import 'package:withhalal_int/wigets/spacing.dart';
 
 class HomeNavPage extends StatelessWidget {
   List body = const [
@@ -23,6 +22,7 @@ class HomeNavPage extends StatelessWidget {
     return GetBuilder<HomeNavController>(builder: (controller) {
       return Scaffold(
           bottomNavigationBar: BottomNavigationBar(
+              showUnselectedLabels: true,
               currentIndex: controller.selectedIndex,
               onTap: controller.onItemTapped,
               selectedItemColor: AppColors.primaryBlue,
@@ -35,7 +35,7 @@ class HomeNavPage extends StatelessWidget {
                           ? AppColors.primaryBlue
                           : AppColors.primarygrey,
                     ),
-                    label: 'Saving'),
+                    label: 'Home'),
                 BottomNavigationBarItem(
                     icon: SvgPicture.asset(
                       savingsIcon,
@@ -51,7 +51,7 @@ class HomeNavPage extends StatelessWidget {
                           ? AppColors.primaryBlue
                           : AppColors.primarygrey,
                     ),
-                    label: 'Saving'),
+                    label: 'Takaful'),
                 BottomNavigationBarItem(
                     icon: SvgPicture.asset(
                       financeIcon,
@@ -59,7 +59,7 @@ class HomeNavPage extends StatelessWidget {
                           ? AppColors.primaryBlue
                           : AppColors.primarygrey,
                     ),
-                    label: 'Takaful'),
+                    label: 'Finance'),
                 BottomNavigationBarItem(
                     icon: SvgPicture.asset(
                       profileIcon,
