@@ -93,6 +93,7 @@ class CreditScoreCard extends StatelessWidget {
     return Container(
       padding: pagePadding,
       height: 68.w,
+      width: double.infinity,
       decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -106,8 +107,7 @@ class CreditScoreCard extends StatelessWidget {
           ],
           color: AppColors.primaryWhite,
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12.sp),
-              topRight: Radius.circular(12.sp))),
+              topLeft: Radius.circular(12.r), topRight: Radius.circular(12.r))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

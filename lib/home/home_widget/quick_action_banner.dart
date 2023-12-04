@@ -77,6 +77,7 @@ class QuickActionCard extends StatelessWidget {
                   children: [
                     TierContainer(
                       height: 42.h,
+                      width: 111.w,
                       color: AppColors.primaryWhite,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -93,6 +94,7 @@ class QuickActionCard extends StatelessWidget {
                       ),
                     ),
                     TierContainer(
+                      width: 110.w,
                       height: 42.h,
                       color: AppColors.primaryWhite,
                       child: Padding(
@@ -111,6 +113,7 @@ class QuickActionCard extends StatelessWidget {
                     ),
                     TierContainer(
                       height: 42.h,
+                      width: 119.w,
                       color: AppColors.primaryWhite,
                       child: Padding(
                         padding: const EdgeInsets.all(5.0),

@@ -16,11 +16,11 @@ class HalalReward extends StatelessWidget {
     return Container(
       width: 301.w,
       height: 124.h,
-      margin: const EdgeInsets.only(
-        right: 20,
+      margin: EdgeInsets.only(
+        right: 20.w,
       ),
-      padding: const EdgeInsets.only(
-        left: 20,
+      padding: EdgeInsets.only(
+        left: 20.w,
       ),
       decoration: BoxDecoration(
         color: bgColor,
@@ -57,7 +57,7 @@ class HalalReward extends StatelessWidget {
                         ))
                   ])),
               CustomeSizedBox(
-                height: 20,
+                height: 20.h,
               ),
               Row(
                 mainAxisSize: MainAxisSize.min,
