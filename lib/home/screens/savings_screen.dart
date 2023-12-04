@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:withhalal_int/wigets/app_colors.dart';
 import 'package:withhalal_int/wigets/app_text.dart';
 import 'package:withhalal_int/home/home_widget/chart_order.dart';
@@ -52,20 +53,27 @@ class Savings extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              AppText(text: 'Total Savings Balance'),
+              AppText(
+                text: 'Total Savings Balance',
+                fontSize: 12.sp,
+                color: AppColors.primarygrey,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   RichText(
                     text: TextSpan(
                         text: '₦50,000.00',
-                        style: TextStyle(
+                        style: GoogleFonts.ysabeauOffice(
                           fontSize: 24.sp,
                           fontWeight: FontWeight.w700,
                           color: AppColors.primaryBlack,
                         )),
                   ),
-                  const Icon(Icons.visibility_off_outlined)
+                  CustomeSizedBox(
+                    width: 5.w,
+                  ),
+                  const Icon(Icons.visibility_outlined)
                 ],
               )
             ],
@@ -79,11 +87,15 @@ class Savings extends StatelessWidget {
           ),
           RichText(
             text: TextSpan(
-                text: 'Target Amount ₦120,000',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: AppColors.primarygrey,
-                )),
+              text: 'Target Amount ',
+              children: [
+                TextSpan(text: '₦120,000', style: GoogleFonts.nunitoSans())
+              ],
+              style: GoogleFonts.dmSans(
+                fontSize: 14,
+                color: AppColors.primarygrey,
+              ),
+            ),
           ),
           CustomeSizedBox(
             height: 10,
@@ -120,7 +132,7 @@ class Savings extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       text: TextSpan(
                           text: 'Your Savings start date is  ',
-                          style: TextStyle(
+                          style: GoogleFonts.dmSans(
                               color: AppColors.primarygrey, fontSize: 12.sp),
                           children: [
                             TextSpan(
@@ -161,8 +173,8 @@ class Savings extends StatelessWidget {
                         ),
                         title: RichText(
                           text: TextSpan(
-                              text: '₦ 20,000.00',
-                              style: TextStyle(
+                              text: '₦20,000.00',
+                              style: GoogleFonts.nunitoSans(
                                 fontSize: 14.sp,
                                 color: AppColors.primaryBlack,
                                 fontWeight: FontWeight.w500,
@@ -171,10 +183,12 @@ class Savings extends StatelessWidget {
                         subtitle: AppText(
                           text: 'Automatic Top up',
                           fontSize: 12.sp,
+                          color: AppColors.primarygrey,
                         ),
                         trailing: AppText(
                           text: 'Sep 23, 2022',
                           fontSize: 12.sp,
+                          color: AppColors.primarygrey,
                         ),
                       )),
             ),

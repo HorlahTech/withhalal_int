@@ -5,7 +5,6 @@ import 'package:withhalal_int/wigets/app_colors.dart';
 import 'package:withhalal_int/wigets/app_text.dart';
 import 'package:withhalal_int/wigets/image_files.dart';
 import 'package:withhalal_int/wigets/spacing.dart';
-import 'package:withhalal_int/home/home_widget/tier_container.dart';
 
 class ZerroChargesBanner extends StatelessWidget {
   const ZerroChargesBanner({
@@ -15,7 +14,7 @@ class ZerroChargesBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+      padding: EdgeInsets.only(top: 28.h, left: 15.w, right: 15.w),
       child: Stack(
         children: [
           Container(
@@ -59,8 +58,11 @@ class ZerroChargesBanner extends StatelessWidget {
                                 children: [
                               TextSpan(
                                   text: '-charges',
-                                  style:
-                                      TextStyle(color: AppColors.primaryWhite))
+                                  style: TextStyle(
+                                    color: AppColors.primaryWhite,
+                                    fontSize: 20.sp,
+                                    fontWeight: FontWeight.w700,
+                                  ))
                             ])),
                         AppText(
                           text: 'on every transaction made!',
@@ -76,6 +78,8 @@ class ZerroChargesBanner extends StatelessWidget {
                             AppText(
                               text: 'Get Now',
                               color: AppColors.primaryBlue,
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w700,
                             ),
                             Icon(
                               Icons.arrow_forward,

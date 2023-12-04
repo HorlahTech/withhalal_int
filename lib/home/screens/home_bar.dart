@@ -22,7 +22,7 @@ class HomeBar extends StatelessWidget {
         children: [
           ListTile(
             contentPadding:
-                pagePadding.copyWith(top: 10, bottom: 0, left: 10, right: 10),
+                pagePadding.copyWith(top: 20, bottom: 20, left: 15, right: 15),
             visualDensity: const VisualDensity(
               horizontal: -4,
             ),
@@ -38,13 +38,15 @@ class HomeBar extends StatelessWidget {
             subtitle: AppText(
               text: 'Do more with your finances',
               color: AppColors.primarygrey,
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w500,
             ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 TierContainer(
-                    width: 72.w,
-                    height: 38.h,
+                    width: 77.w,
+                    height: 32.h,
                     color: AppColors.lighBlue,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +86,8 @@ class HomeBar extends StatelessWidget {
                   const QuickActionCard(),
                   const ZerroChargesBanner(),
                   Padding(
-                    padding: pagePadding,
+                    padding: EdgeInsets.only(
+                        top: 28.h, left: 15.w, right: 15.w, bottom: 18.h),
                     child: AppText(
                       text: 'Halal Rewards',
                       fontSize: 14.sp,
@@ -93,7 +96,10 @@ class HomeBar extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: pagePadding.copyWith(top: 0),
+                    padding: EdgeInsets.only(
+                      left: 15.w,
+                      right: 15.w,
+                    ),
                     child: SizedBox(
                       height: 124.h,
                       child: ListView(
@@ -115,7 +121,11 @@ class HomeBar extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: pagePadding,
+                    padding: EdgeInsets.only(
+                      top: 40.h,
+                      left: 15.w,
+                      right: 15.w,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [

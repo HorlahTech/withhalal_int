@@ -17,7 +17,7 @@ class QuickActionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+      padding: EdgeInsets.only(top: 24.h, left: 15.w, right: 15.w),
       child: Stack(
         children: [
           Container(
@@ -146,7 +146,7 @@ class BottomSheetContainer extends StatelessWidget {
         icon: buyAirtimeIcon, title: 'Buy Airtime', ontap: () {}),
     BottomSheetListModel(icon: buyDataIcon, title: 'Buy Data', ontap: () {}),
     BottomSheetListModel(
-        icon: payElectricityIcon, title: 'payElectricity', ontap: () {}),
+        icon: payElectricityIcon, title: 'Pay Electricity', ontap: () {}),
     BottomSheetListModel(icon: payCableIcon, title: 'Pay Cable', ontap: () {}),
     BottomSheetListModel(
         icon: payReligionIcon, title: 'Pay Religion Institute', ontap: () {}),
@@ -171,9 +171,9 @@ class BottomSheetContainer extends StatelessWidget {
         children: [
           Container(
             width: 60.w,
-            height: 8,
+            height: 5,
             decoration: BoxDecoration(
-                color: AppColors.primarygrey.withOpacity(.5),
+                color: AppColors.primarygrey.withOpacity(.3),
                 borderRadius: BorderRadius.circular(10)),
           ),
           AppText(
@@ -195,7 +195,10 @@ class BottomSheetContainer extends StatelessWidget {
                       title: AppText(text: menu[index].title),
                       trailing: const Icon(Icons.arrow_forward_ios),
                     ),
-                separatorBuilder: (_, index) => const Divider(),
+                separatorBuilder: (_, index) => Divider(
+                      thickness: .5,
+                      color: AppColors.primarygrey.withOpacity(.3),
+                    ),
                 itemCount: menu.length),
           )
         ],

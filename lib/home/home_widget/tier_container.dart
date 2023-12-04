@@ -21,10 +21,10 @@ class TierContainer extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: AppColors.primarygrey.withOpacity(0.5),
-              spreadRadius: 0.2,
-              blurRadius: 1,
-              offset: const Offset(0, 2), // changes position of shadow
+              color: AppColors.primarygrey.withOpacity(0.2),
+              spreadRadius: .7,
+              blurRadius: .7,
+              offset: const Offset(1, 1), // changes position of shadow
             ),
           ],
           color: color,

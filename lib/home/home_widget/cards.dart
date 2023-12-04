@@ -48,15 +48,15 @@ class BalanceCard extends StatelessWidget {
                 children: [
                   RichText(
                       text: TextSpan(
-                          text: ' \u{20A6}  500,387.00',
+                          text: '\u{20A6}500,387.00',
                           style: TextStyle(
                             fontSize: 20.sp,
                             fontWeight: FontWeight.w700,
                             color: AppColors.primaryWhite,
                           ))),
-                  CustomeSizedBox(width: 20.w),
+                  CustomeSizedBox(width: 12.w),
                   Icon(
-                    Icons.visibility_off,
+                    Icons.visibility_outlined,
                     color: AppColors.primaryWhite,
                   ),
                   const EmptySpace(),
@@ -65,8 +65,12 @@ class BalanceCard extends StatelessWidget {
                     fontSize: 16.sp,
                     color: AppColors.primaryWhite,
                   ),
+                  CustomeSizedBox(
+                    width: 5,
+                  ),
                   Icon(
-                    Icons.copy,
+                    Icons.content_copy,
+                    size: 16,
                     color: AppColors.primaryWhite,
                   ),
                 ],
@@ -92,12 +96,12 @@ class CreditScoreCard extends StatelessWidget {
       decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: AppColors.primarygrey.withOpacity(0.3),
+              color: AppColors.primarygrey.withOpacity(0.2),
               spreadRadius: 5,
 
-              blurRadius: 7,
+              blurRadius: 9,
 
-              offset: const Offset(0, 2), // changes position of shadow
+              offset: const Offset(0, 7), // changes position of shadow
             ),
           ],
           color: AppColors.primaryWhite,
@@ -105,6 +109,7 @@ class CreditScoreCard extends StatelessWidget {
               topLeft: Radius.circular(12.sp),
               topRight: Radius.circular(12.sp))),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           AppText(
             text: 'My Credit Score is  0',
